@@ -42,7 +42,7 @@ domedog-pro/
 │   ├── astro.config.mjs     # Astro configuration
 │   └── package.json
 │
-└── strapi/                   # Strapi backend project
+└── backend/                  # Strapi backend project
     ├── src/
     │   ├── api/             # Content types and routes
     │   ├── admin/           # Admin panel customizations
@@ -60,8 +60,9 @@ domedog-pro/
 # Create Astro project
 npm create astro@latest astro
 
-# Create Strapi project
-npm create strapi-app@latest strapi
+# Create Strapi project (in backend directory)
+mkdir backend && cd backend
+npm create strapi-app@latest . --dbclient=sqlite
 
 # Install Astro Strapi loader (for type-safe content collections)
 cd astro
@@ -90,11 +91,11 @@ npm run type-check
 npm run lint
 ```
 
-### Strapi Development
+### Backend (Strapi) Development
 
 ```bash
-# Install dependencies
-cd strapi && npm install
+# Navigate to backend directory
+cd backend
 
 # Start Strapi admin panel (http://localhost:1337)
 npm run develop
@@ -134,14 +135,14 @@ async function getStrapiData(endpoint) {
 ## Build & Deployment
 
 ### Environment Variables
-Create `.env` files in both `astro/` and `strapi/` directories:
+Create `.env` files in both `astro/` and `backend/` directories:
 
 **astro/.env**
 ```
 STRAPI_URL=http://localhost:1337
 ```
 
-**strapi/.env**
+**backend/.env**
 ```
 NODE_ENV=development
 HOST=0.0.0.0

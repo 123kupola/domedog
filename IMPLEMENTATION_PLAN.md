@@ -8,8 +8,9 @@
 - Select package manager: npm
 - Initialize Git repository if needed
 
-### Step 1.2: Create Strapi Project
-- Run `npm create strapi-app@latest strapi` in the root directory
+### Step 1.2: Create Strapi Project (Backend)
+- Run `mkdir backend && cd backend` to create backend directory
+- Run `npm create strapi-app@latest . --dbclient=sqlite` in the backend directory
 - Choose database type (SQLite for development, PostgreSQL recommended for production)
 - This creates a full Strapi project with admin panel
 
@@ -20,7 +21,7 @@
 ## Phase 2: Strapi Backend Setup
 
 ### Step 2.1: Start Strapi Development Server
-- Run `cd strapi && npm install && npm run develop`
+- Run `cd backend && npm run develop`
 - Access admin panel at `http://localhost:1337/admin`
 - Create initial admin user
 
