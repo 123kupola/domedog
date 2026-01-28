@@ -2,6 +2,14 @@
 
 This file documents the setup and configuration of the Strapi backend for the domedog-pro project.
 
+## Admin Account
+
+- **Admin Email**: 123kupola@gmail.com
+- **Created**: January 2026
+- **Access**: http://localhost:1337/admin
+
+*Note: Password is stored securely and not committed to version control.*
+
 ## Initial Setup
 
 ### Official Strapi Creation Command

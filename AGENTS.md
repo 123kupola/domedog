@@ -2,6 +2,14 @@
 
 This file provides guidance to AI agents and developers when working with code in this repository.
 
+## Project Information
+
+- **Project Name**: domedog-pro
+- **Creator**: 123kupola@gmail.com
+- **Repository**: https://github.com/123kupola/domedog
+- **License**: BSD 3-Clause License
+- **Created**: January 2026
+
 ## Project Overview
 
 This is a static site generator built with **Astro** as the frontend framework and **Strapi** as the headless CMS backend. The architecture separates content management (Strapi) from content presentation (Astro), allowing for fast static HTML generation with dynamic content management.
